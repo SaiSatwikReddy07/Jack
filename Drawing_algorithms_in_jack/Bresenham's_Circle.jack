@@ -1,0 +1,57 @@
+class Main{
+    function void Circle(int xc, int yc, int x, int y){
+
+        var int xc, yc, x, y;
+
+    do Screen.drawPixel(xc+x, yc+y);
+    do Screen.drawPixel(xc-x, yc+y);
+    do Screen.drawPixel(xc+x, yc-y);
+    do Screen.drawPixel(xc-x, yc-y);
+    do Screen.drawPixel(xc+y, yc+x);
+    do Screen.drawPixel(xc-y, yc+x);
+    do Screen.drawPixel(xc+y, yc-x);
+    do Screen.drawPixel(xc-y, yc-x);
+
+    return;
+}
+
+ function void circleBres(int xc, int yc, int r){
+
+    var int r, x, y, d;
+
+    let x = 0;
+    let y = r;
+    let d = 3 - (2 * r);
+
+    do Main.Circle(xc, yc, x, y);
+
+    while(y > (x-1)){
+        let x = x +1;
+        if (d>0)
+        {
+        let y = y -1;
+        let d = d + 4 * (x-y) + 10;
+        }
+        else{
+        let d = d + (4 * x) + 6;
+
+    do Main.Circle(xc, yc, x, y);
+
+         }
+     }
+    return;
+ }
+
+    function void main(){
+
+    var int xc, yc, r;
+
+    let xc = 50; 
+    let yc = 50; 
+    let r = 30;
+
+    do Main.circleBres(xc, yc, r);  
+  
+    return ;
+    }
+}

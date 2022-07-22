@@ -1,0 +1,75 @@
+
+
+class Main {
+
+      function void DDA(int x0, int y0, int x1, int y1){
+
+       var int x1, x0, y1, y0, Xinc, Yinc;
+       var int dx, dy, x, y, m, i, Steps, a, b;
+
+      let dx =(x1 - x0);
+      let dy =(y1 - y0);
+
+      let m = dy/dx;
+      let y = y0;
+      let x = x0;
+
+     if( Math.abs(dx) > Math.abs(dy)) {
+
+      let Steps = Math.abs(dx);
+     }
+
+
+     if( Math.abs(dx) < Math.abs(dy)) {
+
+      let Steps = Math.abs(dy);
+     }
+ 
+     let a = Math.abs(Xinc);
+     let b = Math.abs(Yinc);
+
+     let a = dx / Math.abs(Steps);
+     let b = dy / Math.abs(Steps);
+
+     let i = 0;
+
+        while (i < (Steps - 1)) {
+
+       //do Output.printString("(");
+       //do Output.printInt(x);
+       //do Output.printString(",");
+       //do Output.printInt(y);
+       //do Output.printString(")");
+
+
+         let i = i + 1;
+
+         let x = x + Xinc;
+         let y = y + Yinc;
+
+         do Screen.drawPixel(Math.abs(x), Math.abs(y));
+       
+      }
+      return;
+      }
+
+      function void main() {
+      
+       var int x1, x0, y1, y0, Xinc, Yinc;
+       var int dx, dy, x, y, m, i, Steps, a, b;
+
+      let x0 = 2;
+      let y0 = 2;
+      let x1 = 14;
+      let y1 = 16;
+
+      do Main.DDA(x0, y0, x1, y1);
+
+     //do Output.printInt(d);
+     //do Output.printString("hello");
+
+    do Screen.drawLine(x0, y0, x1, y1);
+
+     return;
+   }
+}

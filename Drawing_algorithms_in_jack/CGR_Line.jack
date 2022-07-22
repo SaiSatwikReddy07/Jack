@@ -1,0 +1,53 @@
+class Main{
+
+function void get_cgr(String sequence){
+var int x_coord_A,x_coord_G,x_coord_C,x_coord_T,y_coord_A,y_coord_G,y_coord_C,y_coord_T,x_curr,y_curr,x_target,y_target,i,j;
+var String tmp;
+var char d;
+let x_coord_A = 0;
+let y_coord_A = 0;
+let x_coord_T = 100;
+let y_coord_T = 0;
+let x_coord_G = 100;
+let y_coord_G = 100;
+let x_coord_C = 0;
+let y_coord_C = 100;
+let i = 0;
+let j = 0;
+let x_curr = 50;
+let y_curr = 50;
+
+while(i < (sequence.length())){
+let d = sequence.charAt(i);
+let tmp = d;
+if (d = 65) {let x_target = x_coord_A; let y_target = y_coord_A;}
+if (d = 71) {let x_target = x_coord_G; let y_target = y_coord_G;}
+if (d = 84) {let x_target = x_coord_T; let y_target = y_coord_T;}
+if (d = 67) {let x_target = x_coord_C; let y_target = y_coord_C;}
+
+let x_target = (x_target + x_curr)/2;
+let y_target = (y_target + y_curr)/2;
+
+do Screen.drawLine(x_curr,y_curr,x_target,y_target);
+do Screen.drawPixel(x_target,y_target);
+let x_curr = x_target;
+let y_curr = y_target;
+
+let i = i + 1;
+}
+return;
+}
+function void main(){
+
+var String input;
+let input = Keyboard.readLine("give a gene sequence ");
+do Screen.drawLine(0,0,0,100);
+do Screen.drawLine(0,100,100,100);
+do Screen.drawLine(100,0,100,100);
+
+do Main.get_cgr(input);
+
+return;
+}
+
+}

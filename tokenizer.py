@@ -1,5 +1,5 @@
 from pkg_resources import to_filename
-file_read = open('/home/sameer/Documents/nand2tetris/nand2tetris/projects/10/Square/Main.jack','r')
+file_read = open('/home/admin/Documents/nand2tetris/nand2tetris/projects/10/Square/Main.jack','r') #given the input file location as the first arguement
 lines = file_read.readlines()
 writing = []
 keywords = ['class','constructor','function','method','field','static','var','int','char','boolean','void','true','false','null','this','let','do','if','else','while','return']
@@ -510,6 +510,6 @@ for line in lines:
     line_no+=1
     #print(words)
 
-with open('/home/sameer/Documents/VS_Code_related/py_files/new.xml','w') as file_writer:
+with open('/home/admin/Documents/VS_Code_related/py_files/new.xml','w') as file_writer: #give the location of the output file here
     file_writer.writelines(writing)
     file_writer.close()

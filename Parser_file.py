@@ -5,7 +5,7 @@ written_lines = []
 
 #OS_functions = ['Math','Output','Keyboard','Sys','Array','String','Screen','Memory']
 return_datatype = []#in the first pass, every time the code goes through a function declaration, it can store the function name and the return datatype
-file_reader = open('/home/admin/Documents/VS_Code_related/py_files/Main.jack','r')
+file_reader = open('/home/admin/Documents/VS_Code_related/py_files/Main.jack','r') #give the input file location as the first argument
 lines = file_reader.readlines()#will parse the lines from Main.jack in Square
 var_names = []
 method_names = []
@@ -330,7 +330,7 @@ for statement in lines:
 print("Parsing completed")
 print(written_lines)
 #print(doStatement_eval("do reduce();"))
-with open('/home/admin/Documents/VS_Code_related/py_files/output.xml','w') as file_writer:
+with open('/home/admin/Documents/VS_Code_related/py_files/output.xml','w') as file_writer: #give the desired location of the output file
     file_writer.writelines(written_lines)
     file_writer.close()
 file_reader.close()
